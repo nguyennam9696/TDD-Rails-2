@@ -357,3 +357,9 @@ Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-26 14:59:27 -0700
+
+
+Started GET "/static_pages/about" for ::1 at 2015-06-26 15:25:41 -0700
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 289ms (Views: 277.5ms | ActiveRecord: 0.0ms)
