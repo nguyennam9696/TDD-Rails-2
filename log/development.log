@@ -3401,3 +3401,43 @@ Processing by UsersController#edit as HTML
   Rendered layouts/_header.html.erb (1.0ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-06-30 01:19:50 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CJhP6pnKSrpaMnXeubtuK5BT95xYx1s+UmaH4nEV/OjEK7vENvTcaqi/iNaf3O05I422iXDOsslrwrffWliATw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-06-30 01:19:50 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2015-06-30 01:19:54 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 118.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-06-30 01:19:58 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 119.4ms | ActiveRecord: 0.0ms)

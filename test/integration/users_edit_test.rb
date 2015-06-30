@@ -7,7 +7,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "edit should be unsuccessful" do
+    log_in_as(@user)
     get edit_user_path(@user)
+    assert_template 'users/edit'
     patch user_path(@user), user: { name: "",
                                     email: "user@invalid",
                                     password: "foo",
@@ -16,7 +18,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "edit should be successful" do
+    log_in_as(@user)
     get edit_user_path(@user)
+    assert_template 'users/edit'
     name = "Example User"
     email = "user@example.com"
     patch user_path(@user), user: { name: name,
